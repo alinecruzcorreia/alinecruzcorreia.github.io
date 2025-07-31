@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Calculadora 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/styles/calculadora3.css" />
+    <script src="/scripts/calculadora3.js"></script>
+  </head>
+  <body>
+    <p>Calculadora</p>
+    <input type="number" id="valor1" />
+    <select id="operation">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" id="valor2" />
+    =
+    <input id="total" readonly />
+    <button onclick="calcular()">
+      <i class="fa-solid fa-hand"></i>
+
+      Calcular
+    </button>
+  </body>
+</html>

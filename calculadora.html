@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Calculadora</title>
+    <script>
+      function calcular() {
+        var valor1 = document.getElementById("valor1").value;
+        valor1 = parseInt(valor1);
+        var valor2 = document.getElementById("valor2").value;
+        valor2 = parseInt(valor2);
+        var total = valor1 + valor2;
+        document.getElementById("total").value = total;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="number" id="valor1" />
+    +
+    <input type="number" id="valor2" />
+    =
+    <input type="number" id="total" disabled />
+    <button onclick="calcular()">Calcular</button>
+  </body>
+</html>

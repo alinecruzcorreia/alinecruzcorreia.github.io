@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Calculadora 2</title>
+    <script>
+      function calcular() {
+        var valor1 = document.getElementById("valor1").value;
+        valor1 = parseInt(valor1);
+        var valor2 = document.getElementById("valor2").value;
+        valor2 = parseInt(valor2);
+        var operation = document.getElementById("operation").value;
+        var total;
+
+        if (operation == "+") {
+          total = valor1 + valor2;
+        } else if (operation == "-") {
+          total = valor1 - valor2;
+        } else if (operation == "*") {
+          total = valor1 * valor2;
+        } else if (operation == "/") {
+          if (valor2 !== 0) {
+            total = valor1 / valor2;
+          } else {
+            total = "erro: divisão por zero";
+          }
+        } else {
+          total = "operação invalida";
+        }
+        document.getElementById("total").value = total;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="number" id="valor1" />
+    <select id="operation">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="number" id="valor2" />
+    =
+    <input type="number" id="total" readonly />
+    <button onclick="calcular()">Calcular</button>
+  </body>
+</html>

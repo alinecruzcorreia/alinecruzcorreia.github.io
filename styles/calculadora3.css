@@ -1,0 +1,35 @@
+ body,
+      input,
+      select,
+      button {
+        font-size: 22px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      button {
+        color: white;
+        background-color: black;
+        border-color: aqua;
+      }
+
+      input#total {
+        background-color: #cccccc;
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
