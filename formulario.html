@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário Simples</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Formulário</h1>
+      <form onsubmit="saveForm(); return false;">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="sobrenome" class="form-label">Sobrenome:</label>
+          <input
+            type="text"
+            id="sobrenome"
+            name="sobrenome"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="idade" class="form-label">Idade:</label>
+          <input
+            type="number"
+            id="idade"
+            name="idade"
+            class="form-control"
+            min="18"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="sexo" class="form-label">Sexo:</label>
+          <select id="sexo" name="sexo" class="form-select" required>
+            <option value="">Selecione</option>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </body>
+  <script>
+    function saveForm() {
+      var nome = document.getElementById("nome").value;
+      var sobrenome = document.getElementById("sobrenome").value;
+      var idade = document.getElementById("idade").value;
+      var sexo = document.getElementById("sexo").value;
+      var pessoa = {
+        nome: nome,
+        sobrenome: sobrenome,
+        idade: idade,
+        sexo: sexo,
+      };
+      localStorage.setItem("pessoa", JSON.stringify(pessoa));
+      alert("Formulário salvo com sucesso!");
+    }
+  </script>
+</html>

@@ -9,21 +9,40 @@
     <script src="/scripts/calculadora3.js"></script>
   </head>
   <body>
-    <p>Calculadora</p>
-    <input type="number" id="valor1" />
-    <select id="operation">
-      <option value="+">+</option>
-      <option value="-">-</option>
-      <option value="*">*</option>
-      <option value="/">/</option>
-    </select>
-    <input type="number" id="valor2" />
-    =
-    <input id="total" readonly />
-    <button onclick="calcular()">
-      <i class="fa-solid fa-hand"></i>
-
-      Calcular
-    </button>
+    <div class="calc-container">
+      <h2><i class="fa-solid fa-calculator"></i> Calculadora</h2>
+      <div class="calc-row">
+        <input
+          type="number"
+          id="valor1"
+          class="calc-input"
+          placeholder="Valor 1"
+        />
+        <select id="operation" class="calc-select">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">×</option>
+          <option value="/">÷</option>
+        </select>
+        <input
+          type="number"
+          id="valor2"
+          class="calc-input"
+          placeholder="Valor 2"
+        />
+      </div>
+      <div class="calc-row">
+        <span class="calc-equal">=</span>
+        <input
+          id="total"
+          readonly
+          class="calc-result"
+          placeholder="Resultado"
+        />
+      </div>
+      <button class="calc-btn" onclick="calcular()">
+        <i class="fa-solid fa-play"></i> Calcular
+      </button>
+    </div>
   </body>
 </html>
