@@ -34,3 +34,14 @@ class Rematricula extends alunos {
     console.log('Aluno matriculado!');
   }
 }    
+class Formatura extends alunos {
+  constructor(...args) {
+    super(...args);
+  }   
+  acao() {      
+  }
+}
+console.log('--- Matricula ---');
+const aluno1 = new Matricula('João Silva', '12.345.678-9', '123.456.789-00', true, '3ª Série', 'Futebol');
+aluno1.dadosalunos();
+aluno1.acao();  
